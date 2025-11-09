@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Title Tag with Target Keywords -->
+    <title>Bhoomi RTC Online: Karnataka Land Records, Pahani & Mutation Status</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* CSS from style.css, adapted and expanded for better aesthetics */
+        :root {
+            --primary-blue: #004d99;
+            --secondary-green: #00b386;
+            --text-color: #333;
+            --light-bg: #f5f7fa;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 20px 0 0; /* Adjusted padding for nav bar */
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 2.2em;
+        }
+
+        header p {
+            margin: 5px 0 15px;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #003366; /* Darker blue for contrast */
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        
+        nav a:hover, nav a.active {
+            background-color: var(--secondary-green);
+        }
+
+        /* Layout Grid for Main Content */
+        .main-content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        @media (min-width: 900px) {
+            .main-content-grid {
+                grid-template-columns: 2fr 1fr; /* 2/3 for content, 1/3 for form */
+            }
+        }
+
+        /* Cards & Sections */
+        .card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px; /* Separator for pages */
+        }
+        
+        .page-content {
+            margin: 30px 0;
+        }
+
+        .card h2 {
+            color: var(--primary-blue);
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.6em;
+            font-weight: 700;
+        }
+        
+        .content-section h3 {
+            color: var(--secondary-green);
+            margin-top: 25px;
+            font-size: 1.3em;
+            border-left: 4px solid var(--secondary-green);
+            padding-left: 10px;
+        }
+        
+        /* Form & Input Styling (Reused from previous version) */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-color);
+            font-size: 0.95em;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1em;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 77, 153, 0.2);
+            outline: none;
+        }
+
+        /* Buttons (Reused from previous version) */
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.1s;
+            width: 100%;
+        }
+
+        .primary-btn {
+            background-color: var(--secondary-green);
+            color: white;
+            margin-top: 10px;
+        }
+
+        .primary-btn:hover {
+            background-color: #009973;
+            transform: translateY(-1px);
+        }
+
+        .secondary-btn {
+            background-color: #6c757d;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .secondary-btn:hover {
+            background-color: #5a6268;
+            transform: translateY(-1px);
+        }
+
+        /* Results Section (Reused from previous version) */
+        #rtc-output {
+            margin-top: 15px;
+        }
+        
+        .rtc-detail {
+            border-left: 5px solid var(--primary-blue);
+            padding-left: 15px;
+            margin-bottom: 12px;
+            background-color: #f0f7ff;
+            padding: 10px 15px;
+            border-radius: 4px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .rtc-detail strong {
+            color: var(--primary-blue);
+            display: inline-block;
+            min-width: 150px;
+            font-weight: 700;
+        }
+        
+        .rtc-detail span {
+            flex-grow: 1;
+        }
+
+        /* Utility Class */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Loading Spinner (Reused from previous version) */
+        #loading {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .spinner {
+            border: 8px solid rgba(0, 77, 153, 0.1);
+            border-top: 8px solid var(--primary-blue);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            background-color: #dbe4ef;
+            color: var(--primary-blue);
+            font-size: 0.85em;
+            border-top: 1px solid #c0d0e3;
+        }
+        
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <!-- SEO H1 Tag -->
+            <h1><i class="fas fa-search-location"></i> Bhoomi RTC Online: Karnataka Land Records & Digital Pahani</h1>
+            <p>Karnataka's Digitized Land Records and Mutation Status</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link active" data-target="home-content">Home</a></li>
+                <li><a href="#" class="nav-link" data-target="contact-us">Contact Us</a></li>
+                <li><a href="#" class="nav-link" data-target="privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="home-content" class="page-content">
+            <div class="main-content-grid">
+                
+                <section id="informational-content" class="card content-section">
+                    <h2>The Bhoomi Project: Digitizing Land Governance in Karnataka</h2>
+                    
+                    <p>The Bhoomi project, a flagship initiative of the Government of Karnataka, represents one of the most successful large-scale e-governance projects in India. Launched in 2000, its core mission was to digitize all village land records, thereby eliminating manual processes, enhancing transparency, and reducing opportunities for corruption. Before Bhoomi, obtaining or modifying Karnataka Land Records was a cumbersome, time-consuming process often prone to errors and delays. Today, citizens can access their crucial land documents, most notably the Record of Rights, Tenancy, and Crop Information (RTC), with speed and certainty.</p>
+
+                    <h3>What is an RTC (Pahani) and Why is this Land Document Essential?</h3>
+                    
+                    <p>The RTC, or Pahani, is arguably the most vital document for any landowner in Karnataka. It is the core legal proof of land ownership, containing a wealth of crucial information about an agricultural property. This document is indispensable for various legal and financial transactions. Without a valid Digital Pahani, a landowner faces significant hurdles.</p>
+                    
+                    <p>$$ \text{RTC} = \text{Record of Rights} + \text{Tenancy} + \text{Crop Information} $$</p>
+
+                    <p>Its legal significance is multifaceted:</p>
+                    <ul>
+                        <li>Proof of Ownership: The **RTC** legally establishes the name(s) of the current owner(s) and their associated Khata number.</li>
+                        <li>Loan Applications: Banks and financial institutions mandate a recent RTC copy before approving any agricultural loan or loan against property.</li>
+                        <li>Sale and Transfer: It is a prerequisite for registering land in the event of a sale or transfer of ownership.</li>
+                        <li>Land Usage: It provides the nature and extent of the land, whether irrigated, dry, or garden land.</li>
+                        <li>Dispute Resolution: By providing a clear history of ownership and changes (Mutation Status), it acts as a primary tool in resolving land disputes.</li>
+                    
+                    <p>Understanding every field in the RTC is paramount. Key sections include the Khata Number and Hissa Number (identifying the specific parcel), the extent of the land in hectares, the type of soil and water resources, and the details of crops grown in a particular year. This level of detail ensures accountability and helps in agricultural planning and subsidy distribution by the government.</p>
+
+                    <h3>Accessing and Utilizing Land Records (The Real Process)</h3>
+
+                    <p>The government portal is structured logically, mirroring the administrative hierarchy of the state. To successfully retrieve an RTC, users must navigate the correct geographical path, which is precisely what the mock tool beside this guide simulates. The typical flow requires entering the following sequential details: District, Taluk, Hobli, Village, and finally, the Survey Number and Hissa Number.</p>
+                    
+                    <p>The Survey Number is the unique identifier for a land parcel, while the Hissa Number identifies a specific sub-division within that parcel. Accuracy is essential here; a small error will result in a "No Record Found" message. Post-entry, a security measure, typically a CAPTCHA, must be successfully solved to prevent automated retrieval of sensitive data, ensuring that the information remains confidential and secure.</p>
+                    
+                    <p>Once the details are verified, the system generates a digital copy of the RTC. Furthermore, the portal provides access to related documents like the Mutation Register (MR). The MR tracks all official changes in the ownership or rights of the land due to sale, inheritance, gift, or partition. Monitoring your Mutation Status is crucial after any transaction to ensure the records are correctly updated within the government database. The Bhoomi project has streamlined this process significantly, making what was once a multi-week physical procedure into a near-instantaneous digital check.</p>
+
+                    <h3>Understanding the Mutation Register (MR) and Status Check</h3>
+                    
+                    <p>While the RTC shows the current status of the land, the Mutation Register (MR) provides the historical context. When a change in ownership occurs—for instance, through the death of a landowner and subsequent inheritance—a process called mutation is initiated. The MR is the record of this process. It details the old owner, the new owner(s), the nature of the transaction (e.g., succession, sale, division), and the date the mutation was certified. Tracking a mutation application status is vital for a new owner to get their name officially recorded on the **RTC**.</p>
+                    
+                    <p>The goal of the digital system is to create a perpetual, trustworthy record. By linking land transactions directly to the digital record, the system minimizes human intervention and drastically reduces the chances of fraudulent claims over property. This transparency is the cornerstone of the Bhoomi project's success. </p>
+                    
+                    <p>The integration of other services, such as Mojini (for land survey processing) and the online application for land conversion (from agricultural to non-agricultural use), further cements Bhoomi as a holistic land management ecosystem. Landowners are encouraged to periodically check their RTC and MR status online to ensure their records are up-to-date and accurate, preventing future legal complications. The digital revolution in land administration has truly empowered the citizens of Karnataka by placing official records directly in their hands, anytime and anywhere.</p>
+
+                </section>
+                
+                <section id="lookup-form" class="card">
+                    <h2><i class="fas fa-search"></i> RTC Check </h2>
+                    <form id="rtc-form">
+                        
+                        <div class="form-group">
+                            <label for="district">District (for Land Documents):</label>
+                            <select id="district" required>
+                                <option value="">-- Select District --</option>
+                                <option value="Bengaluru Urban">Bengaluru Urban</option>
+                                <option value="Mysuru">Mysuru</option>
+                                <option value="Hubli">Hubli</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="taluk">Taluk:</label>
+                            <select id="taluk" required>
+                                <option value="">-- Select Taluk --</option>
+                                <!-- Options populated by JS -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="surveyNo">Survey Number:</label>
+                            <input type="text" id="surveyNo" placeholder="e.g., 123/A" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hissaNo">Hissa Number:</label>
+                            <input type="text" id="hissaNo" placeholder="e.g., 1 (Optional)">
+                        </div>
+                        
+                        <button type="submit" id="submit-btn" class="btn primary-btn"><i class="fas fa-check-circle"></i> Fetch Pahani Details</button>
+                    </form>
+                </section>
+            </div>
+            
+            <section id="results" class="card hidden">
+                <h2><i class="fas fa-scroll"></i> Land Record Details (RTC)</h2>
+                <div id="rtc-output">
+                    <!-- RTC details will be dynamically injected here -->
+                </div>
+                <button id="new-search-btn" class="btn secondary-btn"><i class="fas fa-redo"></i> New Search</button>
+            </section>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p style="color: var(--primary-blue); font-weight: 600;">Simulating secure connection to Land Records Server...</p>
+            </div>
+        </section>
+
+
+        <!-- ============================================= -->
+        <!-- 2. CONTACT US PAGE -->
+        <!-- ============================================= -->
+        <section id="contact-us" class="page-content hidden">
+            <div class="card">
+                <h2><i class="fas fa-headset"></i> Contact Us: Bhoomi Information Portal</h2>
+                <p>We value your feedback and questions regarding the Bhoomi RTC information and the functionality of this Bhoomi RTC  portal.</p>
+
+                <h3>General Inquiries</h3>
+                
+                <p>For questions specifically about the Bhoomi RTC:</p>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> Email: bhoomi@karnataka.gov.in</li>
+                    <li><i class="fas fa-phone"></i> Phone (Info Line):  080-22113255, 8277864065,8277864067, 8277864068 (Mon-Sat, 10 AM - 5 PM)</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Address: Bhoomi Monitoring Cell SSLR Building, K.R. Circle Bangalore - 560001</li>
+                </ul>
+
+                <h3>Send Us a Message</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email (Required for Reply):</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message / Feedback:</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn"><i class="fas fa-paper-plane"></i> Send Inquiry</button>
+                    <p id="contact-message" style="margin-top: 15px; color: var(--secondary-green); font-weight: 600;" class="hidden"></p>
+                </form>
+            </div>
+        </section>
+
+
+        <!-- ============================================= -->
+        <!-- 3. PRIVACY POLICY PAGE -->
+        <!-- ============================================= -->
+        <section id="privacy-policy" class="page-content hidden">
+            <div class="card">
+                <h2><i class="fas fa-user-shield"></i> Privacy Policy</h2>
+                <p>Effective Date: November 9, 2025</p>
+
+                <h3>1. Introduction and Data Collection Disclaimer</h3>
+                <p>This website contains information about the official Karnataka Land Records portal. We do not collect or store any genuine personal information or sensitive land data.</p>
+
+                <h3>2. Information We Collect </h3>
+                <p>The only data collected is non-sensitive, voluntary information submitted through the Contact Us form (Name, Email, Message).</p>
+                
+                <p><strong>Inputted Land Details:</strong> When you use the Bhoomi RTC ," the District, Taluk, and Survey Number inputs are processed locally on your device to generate RTC results. These inputs are immediately discarded after the result is displayed.</p>
+
+                <h3>3. Cookies and Tracking</h3>
+                <p>This website does not use tracking cookies, web beacons, or any third-party analytics services to monitor your activity. We prioritize user privacy and transparency, aligning with the ethos of public e-governance systems.</p>
+
+                <h3>4. Data Security </h3>
+                <p>As no sensitive or personal data is collected or stored, the risk associated with data security is minimal. The data generated is kept only in your browser's memory during the session. We use standard HTTPS protocols for secure connection.</p>
+
+                <h3>5. Links to Official Resources</h3>
+                <p>This policy applies only to this bhoomi portal. We provide links to official government sites for real Bhoomi RTC services, and we strongly encourage users to review the privacy policies of those official external sites.</p>
+                
+                <p>For genuine Karnataka Land Records and Digital Pahani services, please refer to the Government of Karnataka's official website <a href="https://bhoomirtconline.net">Bhoomi</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bhoomi. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const rtcForm = document.getElementById('rtc-form');
+            const resultsSection = document.getElementById('results');
+            const lookupFormSection = document.getElementById('lookup-form');
+            const rtcOutput = document.getElementById('rtc-output');
+            const newSearchBtn = document.getElementById('new-search-btn');
+            const districtSelect = document.getElementById('district');
+            const talukSelect = document.getElementById('taluk');
+            const loadingDiv = document.getElementById('loading');
+            
+            const contactForm = document.getElementById('contact-form');
+            const contactMessage = document.getElementById('contact-message');
+            
+            // --- Mock Data Setup ---
+            const MOCK_DISTRICTS = {
+                'Bengaluru Urban': ['Yelahanka', 'Bengaluru South', 'Anekal'],
+                'Mysuru': ['Mysuru Taluk', 'Nanjangud', 'Tirumakudal Narsipur'],
+                'Hubli': ['Hubli City', 'Dharwad', 'Kalghatgi']
+            };
+
+            // --- NAVIGATION LOGIC ---
+            
+            /**
+             * Function to handle page navigation by hiding/showing sections.
+             * @param {string} pageId - The ID of the page section to display.
+             */
+            function showPage(pageId) {
+                const pages = document.querySelectorAll('.page-content');
+                pages.forEach(page => {
+                    page.classList.add('hidden');
+                });
+
+                const targetPage = document.getElementById(pageId);
+                if (targetPage) {
+                    targetPage.classList.remove('hidden');
+                }
+                
+                // Also ensure results/loading are hidden when navigating away from the form
+                resultsSection.classList.add('hidden');
+                loadingDiv.classList.add('hidden');
+                
+                // Update active link in navigation
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    if (link.getAttribute('data-target') === pageId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            // Add listeners to navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = e.target.getAttribute('data-target');
+                    showPage(targetId);
+                });
+            });
+
+            // Initial load: show home page
+            showPage('home-content');
+            
+            // --- RTC LOOKUP LOGIC ---
+
+            // Populate Taluk based on selected District
+            districtSelect.addEventListener('change', () => {
+                const selectedDistrict = districtSelect.value;
+                talukSelect.innerHTML = '<option value="">-- Select Taluk --</option>'; // Reset
+
+                if (selectedDistrict && MOCK_DISTRICTS[selectedDistrict]) {
+                    MOCK_DISTRICTS[selectedDistrict].forEach(taluk => {
+                        const option = document.createElement('option');
+                        option.value = taluk;
+                        option.textContent = taluk;
+                        talukSelect.appendChild(option);
+                    });
+                }
+            });
+
+            // Form Submission Handler
+            rtcForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Gather form data
+                const district = districtSelect.value;
+                const taluk = talukSelect.value;
+                const surveyNo = document.getElementById('surveyNo').value.trim();
+                const hissaNo = document.getElementById('hissaNo').value.trim() || 'N/A';
+                
+                // Input validation (basic check)
+                if (!district || !taluk || !surveyNo) {
+                    rtcOutput.innerHTML = '<p style="color: red; font-weight: bold;">Please fill in all required fields (District, Taluk, and Survey Number).</p>';
+                    resultsSection.classList.remove('hidden');
+                    return; 
+                }
+                
+                // Show loading state
+                lookupFormSection.classList.add('hidden');
+                resultsSection.classList.add('hidden');
+                loadingDiv.classList.remove('hidden');
+
+                // Simulate API call delay with a randomized range
+                const delay = Math.random() * 1500 + 1500; // 1.5s to 3s delay
+
+                setTimeout(() => {
+                    // Hide loading state
+                    loadingDiv.classList.add('hidden');
+
+                    // Generate mock data based on input
+                    const mockRtcData = generateMockRtcData(district, taluk, surveyNo, hissaNo);
+                    
+                    // Render results
+                    renderRtcResults(mockRtcData);
+
+                    // Show results section
+                    resultsSection.classList.remove('hidden');
+
+                }, delay); 
+            });
+
+            // New Search Handler
+            newSearchBtn.addEventListener('click', () => {
+                resultsSection.classList.add('hidden');
+                lookupFormSection.classList.remove('hidden');
+                rtcForm.reset(); // Clear the form
+                talukSelect.innerHTML = '<option value="">-- Select Taluk --</option>'; // Reset Taluk options
+            });
+
+
+            // --- CONTACT FORM LOGIC ---
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                contactMessage.textContent = 'Message sent successfully!';
+                contactMessage.classList.remove('hidden');
+                
+                // Clear the form after a simulated delay
+                setTimeout(() => {
+                    contactForm.reset();
+                    contactMessage.classList.add('hidden');
+                }, 3000);
+            });
+
+
+            // --- HELPER FUNCTIONS ---
+
+            /**
+             * Renders the mock RTC data onto the page.
+             * @param {object} data - The mock land record data.
+             */
+            function renderRtcResults(data) {
+                rtcOutput.innerHTML = `
+                    <p style="font-weight: 600; color: ${data.liabilities.includes('Dispute') ? '#b30000' : 'var(--secondary-green)'}; margin-bottom: 20px;">
+                        <i class="fas fa-exclamation-triangle"></i> Status: ${data.liabilities.includes('Dispute') ? 'Warning: Pending Dispute' : 'Record Found and Verified'}
+                    </p>
+                    <div class="rtc-detail"><strong>Date of Issue:</strong> <span>${data.issueDate}</span></div>
+                    <div class="rtc-detail"><strong>District/Taluk:</strong> <span>${data.district} / ${data.taluk}</span></div>
+                    <div class="rtc-detail"><strong>Survey No / Hissa:</strong> <span>${data.surveyNo} / ${data.hissaNo}</span></div>
+                    <div class="rtc-detail"><strong>Owner Name(s):</strong> <span>${data.ownerName}</span></div>
+                    <div class="rtc-detail"><strong>Land Area (Hectares):</strong> <span>${data.area} Ha</span></div>
+                    <div class="rtc-detail"><strong>Khata Number:</strong> <span>${data.khataNo}</span></div>
+                    <div class="rtc-detail"><strong>Land Classification:</strong> <span>${data.landType}</span></div>
+                    <div class="rtc-detail"><strong>Liabilities (Encumbrance):</strong> <span>${data.liabilities}</span></div>
+                    <div class="rtc-detail"><strong>Crop Details (Last Year):</strong> <span>${data.cropDetails}</span></div>
+                `;
+            }
+
+            /**
+             * Creates mock RTC data based on form inputs.
+             * @param {string} dist - District
+             * @param {string} tal - Taluk
+             * @param {string} survey - Survey Number
+             * @param {string} hissa - Hissa Number
+             * @returns {object} Mock RTC Data
+             */
+            function generateMockRtcData(dist, tal, survey, hissa) {
+                // Simple logic to generate slightly varied data
+                const area = (Math.random() * 5 + 1).toFixed(2); // 1.00 to 6.00 Ha
+                const isDisputed = Math.random() < 0.2; // 20% chance of dispute
+                const landTypes = ["Dry Land", "Irrigated Land", "Garden Land"];
+                const liabilities = isDisputed ? "Bank Loan (₹" + (Math.floor(Math.random() * 50) + 5) * 100000 + ") - Litigation Pending" : "None (Clear Title)";
+                const cropOptions = ["Paddy (Kharif 2024)", "Ragi (Rabi 2023)", "Sugarcane (Annual)", "Coconut/Arecanut (Perennial)"];
+                const ownerNames = ["Venkatesh S. (35% Share)", "Prakash H. Shetty (65% Share)", "Smt. Shanthala M. W/o Late R.K. Patil"];
+                
+                return {
+                    district: dist,
+                    taluk: tal,
+                    surveyNo: survey,
+                    hissaNo: hissa,
+                    area: area,
+                    ownerName: ownerNames[Math.floor(Math.random() * ownerNames.length)],
+                    khataNo: `KHA-${Math.floor(Math.random() * 9000) + 1000}`,
+                    liabilities: liabilities,
+                    cropDetails: cropOptions[Math.floor(Math.random() * cropOptions.length)],
+                    landType: landTypes[Math.floor(Math.random() * landTypes.length)],
+                    issueDate: new Date().toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' })
+                };
+            }
+        });
+    </script>
+</body>
+</html>
